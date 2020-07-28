@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Joel Pang</title>
+    <link href="file://C:\Users\jpang\OneDrive\Documents\Publii\sites\joel-pang\preview/feed.xml" rel="self" />
+    <link href="file://C:\Users\jpang\OneDrive\Documents\Publii\sites\joel-pang\preview" />
+    <updated>1969-12-31T19:00:00-05:00</updated>
+    <author>
+        <name>Joel Pang</name>
+    </author>
+    <id>file://C:\Users\jpang\OneDrive\Documents\Publii\sites\joel-pang\preview</id>
+
+    <entry>
+        <title>Trend Analysis of Supreme T-Shirt Sales on StockX</title>
+        <author>
+            <name>Joel Pang</name>
+        </author>
+        <link href="file://C:\Users\jpang\OneDrive\Documents\Publii\sites\joel-pang\preview/trend-analysis-in-streetwear-with-r-stockx.html"/>
+        <id>file://C:\Users\jpang\OneDrive\Documents\Publii\sites\joel-pang\preview/trend-analysis-in-streetwear-with-r-stockx.html</id>
+
+        <updated>2020-07-28T17:04:59-04:00</updated>
+            <summary>
+                <![CDATA[
+                     Using StockX's data, I was able to gather information on Supreme tee sales from drop seasons Spring/Summer 2017 to Fall/Winter 2019. The red lines in both graphs represent season intervals, and the blue lines represent the weeks that Supreme released tees (most times they&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p> </p>
+<p>Using StockX's data, I was able to gather information on Supreme tee sales from drop seasons Spring/Summer 2017 to Fall/Winter 2019. The red lines in both graphs represent season intervals, and the blue lines represent the weeks that Supreme released tees (most times they don't).</p>
+<p>Columns of data inside the same blue interval represent t-shirts released on the same week. Each column represents a single t-shirt design. For example, the first column of points represents the <a href="https://stockx.com/search?s=sade%20tee" target="_blank" rel="noopener noreferrer">SS 2017 Sade Tee.</a> The color (among white, black, grey, navy, and red) of each data point in a column represents the t-shirt colorway. To simplify, I chose the above colors since they were the most frequently released and averaged over all the sizes.</p>
+<p>The first graph charts the profit (StockX sale price minus retail, not including shipping and StockX fees). The second graph charts the number of transactions on StockX.</p>
+<p>Observations: Black tees tend to outperform both on price and number of sales. <span style="color: var(--text-editor-body-color); font-family: var(--font-base); font-size: inherit; font-weight: var(--font-weight-normal);">It is clear that the resell profit of Supreme tees on StockX has decreased over the years, while the number of sales is increasing. For a while, although StockX makes resale transactions more secure, I've observed that resale prices have been significantly lowered. This data seems to provide concrete proof. While StockX has made Supreme easier to buy, it has also made Supreme less exclusive, therefore decreasing the hype and profit in reslling.</span></p>
+<p><strong>Profit of Supreme Tees Sold on StockX</strong></p>
+<figure class="post__image"><img loading="lazy"  src="file:///C:/Users/jpang/OneDrive/Documents/Publii/sites/joel-pang/preview/media/posts/2/supremeTeesPriceGraph.png" sizes="(max-width: 48em) 100vw, 768px" srcset="file:///C:/Users/jpang/OneDrive/Documents/Publii/sites/joel-pang/preview/media/posts/2/responsive/supremeTeesPriceGraph-xs.png 300w ,file:///C:/Users/jpang/OneDrive/Documents/Publii/sites/joel-pang/preview/media/posts/2/responsive/supremeTeesPriceGraph-sm.png 480w ,file:///C:/Users/jpang/OneDrive/Documents/Publii/sites/joel-pang/preview/media/posts/2/responsive/supremeTeesPriceGraph-md.png 768w ,file:///C:/Users/jpang/OneDrive/Documents/Publii/sites/joel-pang/preview/media/posts/2/responsive/supremeTeesPriceGraph-lg.png 1024w ,file:///C:/Users/jpang/OneDrive/Documents/Publii/sites/joel-pang/preview/media/posts/2/responsive/supremeTeesPriceGraph-xl.png 1360w ,file:///C:/Users/jpang/OneDrive/Documents/Publii/sites/joel-pang/preview/media/posts/2/responsive/supremeTeesPriceGraph-2xl.png 1600w"  alt=""></figure>
+<p> </p>
+<p><strong>Amount of Supreme Tees Sold on StockX</strong></p>
+<figure class="post__image"><img loading="lazy"  src="file:///C:/Users/jpang/OneDrive/Documents/Publii/sites/joel-pang/preview/media/posts/2/supremeTeesAmountSoldGraph.png" sizes="(max-width: 48em) 100vw, 768px" srcset="file:///C:/Users/jpang/OneDrive/Documents/Publii/sites/joel-pang/preview/media/posts/2/responsive/supremeTeesAmountSoldGraph-xs.png 300w ,file:///C:/Users/jpang/OneDrive/Documents/Publii/sites/joel-pang/preview/media/posts/2/responsive/supremeTeesAmountSoldGraph-sm.png 480w ,file:///C:/Users/jpang/OneDrive/Documents/Publii/sites/joel-pang/preview/media/posts/2/responsive/supremeTeesAmountSoldGraph-md.png 768w ,file:///C:/Users/jpang/OneDrive/Documents/Publii/sites/joel-pang/preview/media/posts/2/responsive/supremeTeesAmountSoldGraph-lg.png 1024w ,file:///C:/Users/jpang/OneDrive/Documents/Publii/sites/joel-pang/preview/media/posts/2/responsive/supremeTeesAmountSoldGraph-xl.png 1360w ,file:///C:/Users/jpang/OneDrive/Documents/Publii/sites/joel-pang/preview/media/posts/2/responsive/supremeTeesAmountSoldGraph-2xl.png 1600w"  alt=""></figure>
+<p> </p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
+</feed>
