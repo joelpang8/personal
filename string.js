@@ -67,7 +67,7 @@ for (let i = 0; i < width; i++) {
 function alter_cubes(lst, time, off) {
     lst.forEach((e, ndx) => {
         let t = time_string(ndx * 0.2, time, off);
-        e.position.y = t[1] * 1;
+        e.position.y = t[1] * 1 - mouse.y * 2;
     });
 }
 
