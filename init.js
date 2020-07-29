@@ -5,8 +5,8 @@ renderer.setClearColor(0x000000, 0);
 function resizeRendererToDisplaySize(renderer) {
     const canvas = renderer.domElement;
     const pixelRatio = window.devicePixelRatio;
-    const width = window.outerWidth * pixelRatio | 0;
-    const height = window.outerHeight/1.3 * pixelRatio | 0;
+    const width = window.outerWidth;
+    const height = window.outerHeight/1.3;
     // const width = canvas.clientWidth * pixelRatio | 0;
     // const height = canvas.clientHeight * pixelRatio | 0;
     const needResize = canvas.width !== width || canvas.height !== height;
