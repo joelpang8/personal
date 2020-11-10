@@ -10,6 +10,34 @@
     },
     "items": [
         {
+            "id": "https://joelpang.com/test.html",
+            "url": "https://joelpang.com/test.html",
+            "title": "Artworks",
+            "summary": "<p>My portfolio of artworks developed since 9th grade.</p>\n",
+            "content_html": "<p>My portfolio of artworks developed since 9th grade.</p>\n\n<div class=\"gallery-wrapper\"><div class=\"gallery\"  data-is-empty=\"false\" data-columns=\"3\">\n<figure class=\"gallery__item\"><a href=\"https://joelpang.com/media/posts/4/gallery/Cavern-24-x-24-in.jpg\" data-size=\"1280x1280\"><img loading=\"lazy\" src=\"https://joelpang.com/media/posts/4/gallery/Cavern-24-x-24-in-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"720\"></a>\n<figcaption>Cavern, digital media 24 x 24 in</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://joelpang.com/media/posts/4/gallery/Cruise-30-x-20-in.jpg\" data-size=\"1280x853\"><img loading=\"lazy\" src=\"https://joelpang.com/media/posts/4/gallery/Cruise-30-x-20-in-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"480\"></a>\n<figcaption>Cruise, digital media 30 x 20 in</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://joelpang.com/media/posts/4/gallery/First-Infantry-20-x-20-in.jpg\" data-size=\"1280x1280\"><img loading=\"lazy\" src=\"https://joelpang.com/media/posts/4/gallery/First-Infantry-20-x-20-in-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"720\"></a>\n<figcaption>First Infantry, digital media 20 x 20 in</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://joelpang.com/media/posts/4/gallery/Left-Hook-24-x-24-in.jpg\" data-size=\"1280x1280\"><img loading=\"lazy\" src=\"https://joelpang.com/media/posts/4/gallery/Left-Hook-24-x-24-in-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"720\"></a>\n<figcaption>Left Hook, digital media 24 x 24 in</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://joelpang.com/media/posts/4/gallery/Teleport-18-x-24-in.jpg\" data-size=\"935x1280\"><img loading=\"lazy\" src=\"https://joelpang.com/media/posts/4/gallery/Teleport-18-x-24-in-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"986\"></a>\n<figcaption>Teleport, graphite on paper 18 x 24 in</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://joelpang.com/media/posts/4/gallery/Turpentine-20-x-20-in.jpg\" data-size=\"1280x1280\"><img loading=\"lazy\" src=\"https://joelpang.com/media/posts/4/gallery/Turpentine-20-x-20-in-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"720\"></a>\n<figcaption>Turpentine, digital media 24 x 24 in</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://joelpang.com/media/posts/4/gallery/Turtle-Ship-18-x-24-in.jpg\" data-size=\"934x1279\"><img loading=\"lazy\" src=\"https://joelpang.com/media/posts/4/gallery/Turtle-Ship-18-x-24-in-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"986\"></a>\n<figcaption>Turtle Ship, graphite on paper 18 x 24 in</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://joelpang.com/media/posts/4/gallery/Whirlwind-24-x-24-in.jpg\" data-size=\"1280x1280\"><img loading=\"lazy\" src=\"https://joelpang.com/media/posts/4/gallery/Whirlwind-24-x-24-in-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"720\"></a>\n<figcaption>Whirlwind, digital media 24 x 24 in</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://joelpang.com/media/posts/4/gallery/Untitled_Artwork-18.png\" data-size=\"2640x3960\"><img loading=\"lazy\" src=\"https://joelpang.com/media/posts/4/gallery/Untitled_Artwork-18-thumbnail.png\" alt=\"\" width=\"720\" height=\"1080\"></a>\n<figcaption>digital media 20 x 30 in</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://joelpang.com/media/posts/4/gallery/Untitled_Artwork-17.png\" data-size=\"2640x2640\"><img loading=\"lazy\" src=\"https://joelpang.com/media/posts/4/gallery/Untitled_Artwork-17-thumbnail.png\" alt=\"\" width=\"720\" height=\"720\"></a>\n<figcaption>Wings, digital media 20 x 20 in</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://joelpang.com/media/posts/4/gallery/Untitled_Artwork-16.png\" data-size=\"3168x3168\"><img loading=\"lazy\" src=\"https://joelpang.com/media/posts/4/gallery/Untitled_Artwork-16-thumbnail.png\" alt=\"\" width=\"720\" height=\"720\"></a>\n<figcaption>digital media 24 x 24 in</figcaption>\n</figure>\n</div></div>",
+            "author": {
+                "name": "Joel Pang"
+            },
+            "tags": [
+            ],
+            "date_published": "2020-11-10T00:42:52-05:00",
+            "date_modified": "2020-11-10T00:42:52-05:00"
+        },
+        {
+            "id": "https://joelpang.com/t.html",
+            "url": "https://joelpang.com/t.html",
+            "title": "Introduction",
+            "summary": "Hi! I'm Joel Pang, a rising senior at Rudolf Steiner School. Ever since my freshman year, I have always admired the street wear scene. From the rise of Off-White, to the dominance of Supreme in the street wear culture, I have found it all very&hellip;",
+            "content_html": "<p>Hi! I'm Joel Pang, a rising senior at Rudolf Steiner School. Ever since my freshman year, I have always admired the street wear scene. From the rise of Off-White, to the dominance of Supreme in the street wear culture, I have found it all very fascinating. A huge part of this culture that got me interested was the reselling aspect of it. As a high school student, there aren't too many opportunities to make money, and reselling was the answer. I was fortunate to start off my reselling journey successfully, starting by reselling Supreme merchandise. As I progressed and became more familiar with street wear, I started to resell an array of street wear products. StockX was starting to become popular at the time, and it was one of the apps that helped me learn how to resell more efficiently. To this day, I constantly check StockX to see the newest asks and bids on certain products, which helps me understand the market more. </p>",
+            "author": {
+                "name": "Joel Pang"
+            },
+            "tags": [
+            ],
+            "date_published": "2020-11-10T00:42:52-05:00",
+            "date_modified": "2020-11-10T00:42:52-05:00"
+        },
+        {
             "id": "https://joelpang.com/trend-analysis-in-streetwear-with-r-stockx.html",
             "url": "https://joelpang.com/trend-analysis-in-streetwear-with-r-stockx.html",
             "title": "Trend Analysis of Supreme T-Shirt Sales on StockX",
@@ -20,8 +48,8 @@
             },
             "tags": [
             ],
-            "date_published": "2020-07-29T01:00:01-04:00",
-            "date_modified": "2020-07-29T01:00:01-04:00"
+            "date_published": "2020-11-10T00:42:52-05:00",
+            "date_modified": "2020-11-10T00:42:52-05:00"
         }
     ]
 }
