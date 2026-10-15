@@ -129,11 +129,11 @@ const SITE = {
     { file: "2019-07-red-blue-grid.jpg", title: "Untitled", year: "2019", medium: "Digital Art", dimensions: "" },
     { file: "2019-06-orange-green.jpg", title: "Untitled", year: "2019", medium: "Digital Art", dimensions: "" },
     { file: "2019-02-yellow-violet.jpg", title: "Untitled", year: "2019", medium: "Digital Art", dimensions: "" },
-    { file: "2019-08-pastel-yellow.jpg", title: "Untitled", year: "2019", medium: "Digital Art", dimensions: "" },
+    { file: "2019-08-pastel-yellow.jpg", title: "Wings", year: "2019", medium: "Digital Art", dimensions: "" },
     { file: "2019-09-pastel-blur.jpg", title: "Untitled", year: "2019", medium: "Digital Art", dimensions: "" },
     { file: "2019-04-turquoise.jpg", title: "Untitled", year: "2019", medium: "Digital Art", dimensions: "" },
     { file: "2019-03-blue.jpg", title: "Untitled", year: "2019", medium: "Digital Art", dimensions: "" },
-    { file: "2019-05-pencil-sketch.jpg", title: "Untitled", year: "2019", medium: "Digital Art", dimensions: "" },
+    { file: "2019-05-pencil-sketch.jpg", title: "Untitled", year: "2019", medium: "Pencil on paper", dimensions: "" },
   ],
 
   bio: {
