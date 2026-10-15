@@ -65,7 +65,7 @@ const SITE = {
     { images: ["2026-01-1.jpg", "2026-01-3.jpg"], status: "sold", title: "Untitled", year: "2026", medium: "Ink/Oil on Wood",           dimensions: '8" x 10"' },
     { file: "2026-13-1.jpg",                  title: "Untitled", year: "2026", medium: "Ink/Oil on Wood",           dimensions: '8" x 10"' },
     { file: "2026-16-1.jpg", status: "sold",                                       title: "Untitled", year: "2026", medium: "Ink/Oil on Wood",           dimensions: '8" x 10"' },
-    { file: "2026-18-1.jpg",                                       title: "Untitled", year: "2026", medium: "Ink/Oil on Wood",           dimensions: '8" x 10"' },
+    { file: "2026-18-1.jpg", status: "sold",                         title: "Untitled", year: "2026", medium: "Ink/Oil on Wood",           dimensions: '8" x 10"' },
     { file: "2026-14-1.jpg", status: "sold",                  title: "Untitled", year: "2026", medium: "Ink/Oil on Wood",           dimensions: '8" x 10"' },
     { file: "2026-17-1.jpg",                  title: "Untitled", year: "2026", medium: "Ink/Oil on Wood",           dimensions: '8" x 10"' },
     { file: "2026-12-1.jpg",                  title: "Untitled", year: "2026", medium: "Ink/Oil on Wood",           dimensions: '8" x 10"' },
