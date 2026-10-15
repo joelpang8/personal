@@ -7,6 +7,7 @@ Plain HTML, CSS and JavaScript. There is no build step, so hosting just serves t
 
 - `content.js` holds everything you will normally edit: the artwork list (title, year, medium, size, sold), the homepage pieces, bio, education, exhibitions, awards, email and Instagram.
 - `images/` holds the artwork photos. `images/hd/` holds high-resolution copies used only by the magnifier.
+  `images/grid/` holds smaller copies for the year-page cards; GitHub makes these automatically when you add a photo.
 - `index.html` is the homepage. `about.html`, `accomplishments.html` and `contact.html` are the other pages.
 - `2019/` to `2026/` each hold one year page. They fill themselves in from `content.js`.
 - `style.css` is the look, `script.js` the galleries, lightbox, Inquire links and magnifier, `hero.js` the homepage opening, and `pages.js` the About, Accomplishments and Contact effects.
@@ -21,5 +22,5 @@ Plain HTML, CSS and JavaScript. There is no build step, so hosting just serves t
 
 ## Hosting
 
-Netlify, connected to this repository: no build command, publish directory `.` (the top level).
-Every change saved here goes live in about a minute. If something breaks, open Deploys in Netlify and publish an earlier version.
+GitHub Pages, from the `master` branch of this repository (the `CNAME` file keeps it on joelpang.com).
+Every change saved here goes live in about a minute. `sitemap.xml` lists the pages for search engines; add a line there when a new year page is added.

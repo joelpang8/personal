@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const root = window.SITE_ROOT || "";
   const yearHref = window.yearHref || ((y) => root + y + "/");
   const imgSrc = (file) => root + "images/" + file;
+  // cards and tiles use the smaller copy in images/grid/; if it is missing, the image falls back to the full photo
+  const gridSrc = (file) => root + "images/grid/" + file;
+  const gridImg = (file, attrs) =>
+    `<img src="${gridSrc(file)}" onerror="this.onerror=null;this.src='${imgSrc(file)}'" ${attrs} />`;
   const years = (typeof SITE !== "undefined" && SITE.years) || [];
   const worksFor = (y) => SITE.artworks.filter((a) => String(a.year) === String(y));
   // a piece can have one photo (`file`) or several (`images`: full view first, then details)
@@ -78,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const cover = works.find((a) => a.cover) || works[0];   // `cover: true` in content.js picks the year's cover
         return `
         <a class="year-tile" href="${yearHref(y)}">
-          <figure>${cover ? `<img src="${imgSrc(viewsOf(cover)[0])}" alt="Work from ${y}" loading="lazy" />` : ""}</figure>
+          <figure>${cover ? `${gridImg(viewsOf(cover)[0], `alt="Work from ${y}" loading="lazy"`)}` : ""}</figure>
           <span class="year-tile-label">
             <span class="year-tile-year" style="view-transition-name: year-${y}">${y}</span>
             <span class="year-tile-count">${countLabel(works.length)}</span>
@@ -138,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="gi-media">
           <button class="gi-open" aria-label="View ${esc(a.title)} full size">
             <figure>
-              <img src="${imgSrc(views[0])}" alt="${esc(a.title)}, ${esc(a.medium)}, ${esc(a.year)}" loading="lazy" />
+              ${gridImg(views[0], `alt="${esc(a.title)}, ${esc(a.medium)}, ${esc(a.year)}" loading="lazy"`)}
             </figure>
           </button>
         </div>
@@ -171,7 +175,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const views = viewsOf(a);
     v = (v + views.length) % views.length;
     card.dataset.view = v;
-    card.querySelector(".gi-open img").src = imgSrc(views[v]);
+    const cardImg = card.querySelector(".gi-open img");
+    cardImg.onerror = () => { cardImg.onerror = null; cardImg.src = imgSrc(views[v]); };
+    cardImg.src = gridSrc(views[v]);
     card.querySelectorAll(".dot").forEach((d) => {
       if (+d.dataset.view === v) d.setAttribute("aria-current", "true");
       else d.removeAttribute("aria-current");
@@ -294,7 +300,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const fileOf = (img) => decodeURIComponent((img.getAttribute("src") || "").split("/").pop());
   const sourceFor = (img) => {
     const f = fileOf(img);
-    return hd.has(f) ? root + "images/hd/" + f : img.currentSrc || img.src;
+    return root + "images/" + (hd.has(f) ? "hd/" : "") + f;   // never the small grid copy
   };
   // the painted area of an <img> drawn with object-fit: contain
   const paintedRect = (img) => {
