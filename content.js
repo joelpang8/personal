@@ -78,6 +78,7 @@ const SITE = {
     { file: "2026-19-1.jpg",                  title: "Untitled", year: "2026", medium: "Ink/Oil on Wood",           dimensions: '8" x 10"' },
     { file: "2026-20-1.jpg",                  title: "Untitled", year: "2026", medium: "Ink/Oil on Wood",           dimensions: '8" x 10"' },
     // 2025
+    { images: ["2025-surveillance-1.jpg", "2025-surveillance-2.jpg"], title: "Surveillance", year: "2025", medium: "Acrylic, ink, and collage on canvas" },
     { file: "2025-restoration.jpg", status: "sold", title: "Restoration", year: "2025", medium: "Ink on wood", dimensions: '8" x 10"' },
     { file: "2025-04.jpg", status: "sold",                                         title: "Untitled", year: "2025", medium: "Ink/Oil on Wood", dimensions: '8" x 10"' },
     { file: "2025-01.jpg", status: "sold",                                         title: "Untitled", year: "2025", medium: "Oil and ink on canvas", dimensions: '16" x 20"' },
@@ -192,6 +193,8 @@ SITE.hd = [
   "2025-08.jpg",
   "2025-09.jpg",
   "2025-restoration.jpg",
+  "2025-surveillance-1.jpg",
+  "2025-surveillance-2.jpg",
   "2025-sketch-10.jpg",
   "2025-sketch-11.jpg",
   "2025-sketch-12.jpg",
