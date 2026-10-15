@@ -18,7 +18,7 @@
     const first = (a.images && a.images.length ? a.images[0] : a.file).replace(/\.[a-z]+$/i, "");
     return href + "#w-" + first;
   };
-  const yearHref = (y) => (window.yearHref ? window.yearHref(y) : root + y + "/index.html");
+  const yearHref = (y) => (window.yearHref ? window.yearHref(y) : root + y + "/");
   const pieces = () => (SITE.heroPieces || []).map((f) => ({ file: f, year: yearOf(f) })).filter((p) => p.year);
 
   /* ---------------- rotate ----------------

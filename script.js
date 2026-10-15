@@ -4,7 +4,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = window.SITE_ROOT || "";
-  const yearHref = window.yearHref || ((y) => root + y + "/index.html");
+  const yearHref = window.yearHref || ((y) => root + y + "/");
   const imgSrc = (file) => root + "images/" + file;
   const years = (typeof SITE !== "undefined" && SITE.years) || [];
   const worksFor = (y) => SITE.artworks.filter((a) => String(a.year) === String(y));
