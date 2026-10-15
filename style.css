@@ -860,6 +860,7 @@ button:focus-visible {
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; }
+  .hero-text.fade-out { transition: opacity 10s ease-in-out !important; }   /* a gentle fade, kept on purpose */
 }
 
 /* ---------- Footer contact ---------- */
