@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About — Joel Pang</title>
+<meta name="description" content="Bio and artist statement for Joel Pang." />
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" />
+<link rel="icon" href="favicon-64.png" type="image/png" sizes="64x64" />
+<link rel="icon" href="icon-192.png" type="image/png" sizes="192x192" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<meta name="theme-color" content="#faf9f6" />
+<!-- link previews (texts, Instagram, email, social) -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Joel Pang" />
+<meta property="og:title" content="About — Joel Pang" />
+<meta property="og:description" content="Bio and artist statement for Joel Pang, a visual artist working in oil and ink. Madison, WI." />
+<meta property="og:url" content="https://joelpang.com/about.html" />
+<meta property="og:image" content="https://joelpang.com/images/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Joel Pang — Jukebox, oil and ink on canvas" />
+<meta name="twitter:card" content="summary_large_image" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Joel Pang</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Work</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="accomplishments.html">Accomplishments</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap about-hero">
+    <figure class="about-art" data-ink-reveal>
+      <img src="images/2026-signal-passing.jpg" alt="Signal Passing, oil and ink on canvas, 2026" />
+      <figcaption>Signal Passing, 2026</figcaption>
+    </figure>
+    <div class="about-intro">
+      <p class="eyebrow">About</p>
+      <h1 class="about-lede" id="about-lede"></h1>
+      <p class="about-place">Madison, WI &middot; from New York City</p>
+    </div>
+  </section>
+
+  <section class="wrap about-body">
+    <div class="about-text" id="bio"></div>
+
+    <figure class="statement">
+      <p class="eyebrow">Artist statement</p>
+      <blockquote id="statement"></blockquote>
+    </figure>
+
+    <div class="about-facts">
+      <div>
+        <h2 class="mini-heading">Education</h2>
+        <ul class="edu-list" id="edu-list"></ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; <span id="year"></span> Joel Pang</span>
+    <span class="footer-contact"><!-- email and Instagram, filled in by script.js from content.js --></span>
+  </div>
+</footer>
+
+<script src="content.js"></script>
+<script>
+(function () {
+  const B = SITE.bio;
+  document.getElementById("about-lede").textContent = B.short;
+  document.getElementById("bio").innerHTML = B.paragraphs.map((p) => `<p>${p}</p>`).join("");
+  document.getElementById("statement").textContent = B.statement;
+  document.getElementById("edu-list").innerHTML = B.education
+    .map((e) => `<li><strong>${e.school}</strong><span>${e.detail}</span><span class="edu-date">${e.date}</span></li>`).join("");
+})();
+</script>
+<script src="script.js"></script>
+<script src="pages.js"></script>
+</body>
+</html>
