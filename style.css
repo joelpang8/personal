@@ -183,6 +183,7 @@ nav.main-nav a[aria-current="page"] {
 .hero { position: relative; overflow: hidden; }
 .hero-stage { position: absolute; inset: 0; }
 .hero-text { position: relative; z-index: 2; }
+.hero-text.fade-out { opacity: 0; transition: opacity 10s ease-in-out; }   /* hero.js: the name fades away */
 
 .hero[data-style="rotate"],
 .hero[data-style="lines"],
