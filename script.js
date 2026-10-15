@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const inquireHtml = (a, cls) => {
     const st = statusOf(a);
     if (st === "sold") return `<span class="${cls} is-sold">Sold</span>`;
+    if (SITE.inquireFromYear && Number(a.year) < SITE.inquireFromYear) return "";   // older work: no Inquire link
     const tag = st === "available" ? `<span class="avail-tag">Available</span>` : "";
     return SITE.email
       ? `<span class="${cls}">${tag}<a class="inquire" href="${esc(inquireHref(a))}">Inquire</a></span>`

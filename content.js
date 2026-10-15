@@ -24,6 +24,8 @@ const SITE = {
   // Every piece shows an "Inquire" link that opens an email to you about it.
   // Optional per piece: add  status: "available"  or  status: "sold"  to its line.
   //   "available" adds an "Available" tag; "sold" shows "Sold" and hides the Inquire link.
+  // Pieces made before this year get no Inquire link (a "sold" status still shows "Sold").
+  inquireFromYear: 2025,
 
   // Each year here gets its own page (2019/index.html, 2020/index.html, ...).
   // Listed newest first; that's the order of the tiles on the homepage.
