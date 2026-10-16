@@ -1,4 +1,5 @@
-"""Make the smaller copies the year-page cards use (images/grid/), one per photo in images/.
+"""Make the smaller copies the year-page cards use (images/grid/), one per photo in images/,
+and images/grid/sizes.js, which tells the pages each photo's proportions before it loads.
 Run from the site's top folder. Photos without a grid copy get one; photos named on the command line
 (e.g. a replaced photo) are always redone."""
 import os, sys
@@ -25,3 +26,18 @@ for name in sorted(os.listdir(SRC)):
             g.write(f.read())
     made += 1
 print(f"{made} grid image(s) written")
+
+# width and height of every photo, so cards keep their shape while photos load
+sizes = {}
+for name in sorted(os.listdir(SRC)):
+    src = os.path.join(SRC, name)
+    if name in SKIP or not name.lower().endswith((".jpg", ".jpeg")) or not os.path.isfile(src):
+        continue
+    with Image.open(src) as im:
+        w, h = ImageOps.exif_transpose(im).size
+    sizes[name] = [w, h]
+lines = ",\n".join(f'  "{k}": [{w}, {h}]' for k, (w, h) in sizes.items())
+with open(os.path.join(OUT, "sizes.js"), "w") as f:
+    f.write("/* made by .github/scripts/make_grid.py: width and height of each photo in images/ */\n")
+    f.write("window.IMAGE_SIZES = {\n" + lines + "\n};\n")
+print(f"sizes.js lists {len(sizes)} photos")

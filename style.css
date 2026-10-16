@@ -1168,3 +1168,33 @@ img.loupe-on { cursor: none; }
 .hero-caption .hc-meta { font-size: 0.68rem; letter-spacing: 0.12em; opacity: 0.75; }
 .hero-caption::after { content: "View piece \2192"; font-size: 0.64rem; letter-spacing: 0.16em; opacity: 0; transform: translateY(-2px); transition: opacity 0.2s ease, transform 0.2s ease; }
 .hero-caption:hover::after, .hero-caption:focus-visible::after { opacity: 0.9; transform: none; }
+
+/* ---------- Year pages: staggered cards that keep each piece's shape (script.js puts cards into columns) ---------- */
+.year-gallery { display: flex; align-items: flex-start; gap: var(--gap); }
+.gallery-col { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: clamp(1.75rem, 3vw, 2.5rem); }
+.year-gallery .gallery-item figure { aspect-ratio: auto; }
+.year-gallery .gallery-item img { height: auto; object-fit: initial; display: block; }
+
+/* ---------- Year links: newest first, one row that swipes sideways on narrow screens ---------- */
+.year-strip { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px; }
+.year-strip::-webkit-scrollbar { display: none; }
+.year-strip a { flex: none; }
+
+/* ---------- Homepage: the newest year is a wide featured tile ---------- */
+.year-tile.is-feature { grid-column: span 2; }
+.year-tile.is-feature figure { aspect-ratio: auto; flex: 1; position: relative; min-height: 0; }
+.year-tile.is-feature img { position: absolute; inset: 0; object-position: center 30%; }
+@media (max-width: 860px) {
+  .year-tile.is-feature figure { flex: none; aspect-ratio: 5 / 4; }
+}
+
+/* ---------- One heading style for year, Accomplishments and Contact pages ---------- */
+.year-header h1,
+.page-header h1,
+.contact-inner h1 {
+  font-size: clamp(2.6rem, 8vw, 5.5rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}

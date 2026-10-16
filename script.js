@@ -8,8 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const imgSrc = (file) => root + "images/" + file;
   // cards and tiles use the smaller copy in images/grid/; if it is missing, the image falls back to the full photo
   const gridSrc = (file) => root + "images/grid/" + file;
+  // width/height (from images/grid/sizes.js) let the browser hold each card's shape before the photo arrives
+  const sizeAttrs = (file) => {
+    const wh = (window.IMAGE_SIZES || {})[file];
+    return wh ? `width="${wh[0]}" height="${wh[1]}"` : "";
+  };
   const gridImg = (file, attrs) =>
-    `<img src="${gridSrc(file)}" onerror="this.onerror=null;this.src='${imgSrc(file)}'" ${attrs} />`;
+    `<img src="${gridSrc(file)}" onerror="this.onerror=null;this.src='${imgSrc(file)}'" ${sizeAttrs(file)} ${attrs} />`;
   const years = (typeof SITE !== "undefined" && SITE.years) || [];
   const worksFor = (y) => SITE.artworks.filter((a) => String(a.year) === String(y));
   // a piece can have one photo (`file`) or several (`images`: full view first, then details)
@@ -77,11 +82,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const index = document.getElementById("year-index");
   if (index) {
     index.innerHTML = years
-      .map((y) => {
+      .map((y, i) => {
         const works = worksFor(y);
         const cover = works.find((a) => a.cover) || works[0];   // `cover: true` in content.js picks the year's cover
         return `
-        <a class="year-tile" href="${yearHref(y)}">
+        <a class="year-tile${i === 0 ? " is-feature" : ""}" href="${yearHref(y)}">
           <figure>${cover ? `${gridImg(viewsOf(cover)[0], `alt="Work from ${y}" loading="lazy"`)}` : ""}</figure>
           <span class="year-tile-label">
             <span class="year-tile-year" style="view-transition-name: year-${y}">${y}</span>
@@ -97,13 +102,16 @@ document.addEventListener("DOMContentLoaded", () => {
     h.style.viewTransitionName = "year-" + h.textContent.trim();
   });
 
-  /* ---- year strip (2019 ... 2026) on each year page ---- */
+  /* ---- year strip on each year page: newest first, like the homepage; one row that swipes on phones ---- */
   const ascending = [...years].sort();
   document.querySelectorAll(".year-strip").forEach((strip) => {
     const current = strip.dataset.current;
-    strip.innerHTML = ascending
+    strip.innerHTML = [...ascending].reverse()
       .map((y) => `<a href="${yearHref(y)}"${y === current ? ' aria-current="page"' : ""}>${y}</a>`)
       .join("");
+    const cur = strip.querySelector('[aria-current="page"]');   // keep the current year in view without moving the page
+    if (cur && strip.scrollWidth > strip.clientWidth)
+      strip.scrollLeft = cur.offsetLeft - strip.offsetLeft - (strip.clientWidth - cur.offsetWidth) / 2;
   });
 
   /* ---- previous / next year links ---- */
@@ -160,6 +168,28 @@ document.addEventListener("DOMContentLoaded", () => {
       : `<p class="gallery-empty">No works from ${esc(y)} are posted yet.</p>`;
   });
 
+  /* ---- staggered layout: cards keep their piece's shape and go, in order, into the shortest column ---- */
+  const colsMQ = [window.matchMedia("(max-width: 520px)"), window.matchMedia("(max-width: 860px)")];
+  const masonry = (grid) => {
+    const items = [...grid.querySelectorAll(".gallery-item")];
+    if (!items.length) return;
+    const n = colsMQ[0].matches ? 1 : colsMQ[1].matches ? 2 : 3;
+    if (+grid.dataset.cols === n) return;
+    grid.dataset.cols = n;
+    const cols = Array.from({ length: n }, () => Object.assign(document.createElement("div"), { className: "gallery-col" }));
+    const heights = new Array(n).fill(0);
+    items.sort((a, b) => a.dataset.index - b.dataset.index).forEach((item) => {
+      const img = item.querySelector(".gi-open img");
+      const w = +img.getAttribute("width"), h = +img.getAttribute("height");
+      const k = heights.indexOf(Math.min(...heights));
+      cols[k].appendChild(item);
+      heights[k] += (w && h ? h / w : 1.25) + 0.3;   // + room for the caption
+    });
+    grid.replaceChildren(...cols);
+  };
+  document.querySelectorAll(".year-gallery").forEach(masonry);
+  colsMQ.forEach((mq) => mq.addEventListener("change", () => document.querySelectorAll(".year-gallery").forEach(masonry)));
+
   /* ---- a link like /2026/#w-2026-04-1 (from an Inquire email) scrolls to that piece and highlights it ---- */
   if (location.hash.startsWith("#w-")) {
     const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
@@ -177,6 +207,8 @@ document.addEventListener("DOMContentLoaded", () => {
     card.dataset.view = v;
     const cardImg = card.querySelector(".gi-open img");
     cardImg.onerror = () => { cardImg.onerror = null; cardImg.src = imgSrc(views[v]); };
+    const wh = (window.IMAGE_SIZES || {})[views[v]];
+    if (wh) { cardImg.width = wh[0]; cardImg.height = wh[1]; } else { cardImg.removeAttribute("width"); cardImg.removeAttribute("height"); }
     cardImg.src = gridSrc(views[v]);
     card.querySelectorAll(".dot").forEach((d) => {
       if (+d.dataset.view === v) d.setAttribute("aria-current", "true");
