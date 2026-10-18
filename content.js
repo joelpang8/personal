@@ -141,7 +141,7 @@ const SITE = {
     paragraphs: [
       "Joel Pang is a visual artist based in Madison, WI, originally from New York City. Working primarily in oil and ink on canvas, wood, and paper, Joel's practice moves between abstraction and quiet representation, drawn to the way color and texture can hold a feeling before it becomes a subject.",
       "Joel's work has been shown in juried and regional exhibitions, including Art on the Kinni (AOK) in River Falls, WI and the Greenwich Village Art Fair.",
-      "Joel studied at Cornell University, earning a B.A. in Information Science with a Minor in Fine Arts, and currently works out of a studio in Madison, WI. Commissions and studio visits are welcome by request."
+      "Joel began at Cornell University as a BFA student in Fine Arts before turning to data science, graduating with a B.A. in Information Science and a Minor in Fine Arts. Joel currently works out of a studio in Madison, WI. Commissions and studio visits are welcome by request."
     ],
     statement: "My work begins with color and material rather than image. I'm interested in the moment a surface stops being paint and starts being a place — where a viewer can locate their own memory or mood inside something that never depicted anything in particular. Each piece is built slowly, in layers, until it holds still enough to be looked at twice.",
 
