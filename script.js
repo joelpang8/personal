@@ -364,10 +364,19 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
   if (canHover) {
+    // in the full-size view the magnifier follows right away; on the grid it waits until the mouse rests on a piece
+    let dwellImg = null, dwellTimer = null, ready = null, last = null;
     document.addEventListener("pointermove", (e) => {
       if (e.pointerType !== "mouse") return;
       const img = e.target.closest && e.target.closest(".gi-open img, .lightbox-inner img");
-      if (img) show(img, e.clientX, e.clientY, false); else if (active) hide();
+      last = { x: e.clientX, y: e.clientY };
+      if (!img) { clearTimeout(dwellTimer); dwellImg = ready = null; if (active) hide(); return; }
+      if (img.closest(".lightbox-inner") || ready === img) { show(img, e.clientX, e.clientY, false); return; }
+      if (dwellImg !== img) {
+        if (active) hide();
+        dwellImg = img; ready = null; clearTimeout(dwellTimer);
+        dwellTimer = setTimeout(() => { ready = img; show(img, last.x, last.y, false); }, 500);
+      }
     });
     document.addEventListener("pointerleave", hide);
     window.addEventListener("scroll", hide, { passive: true });

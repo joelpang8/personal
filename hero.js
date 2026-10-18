@@ -318,6 +318,6 @@
     // the name fades away over 10s, starting once the signature (first visit) has finished drawing it
     const hero = document.getElementById("hero");
     const name = hero && hero.querySelector(".hero-text");
-    if (name) setTimeout(() => name.classList.add("fade-out"), hero.classList.contains("sig-intro") ? 2700 : 100);
+    if (name) setTimeout(() => { name.classList.add("fade-out"); hero.classList.add("name-fading"); }, hero.classList.contains("sig-intro") ? 2700 : 100);
   });
 })();
