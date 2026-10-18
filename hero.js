@@ -95,6 +95,7 @@
     const startReveal = () => {
       if (revealing || hold || !imgs[nxt].complete) return;
       revealing = true; frameN = 0;
+      caption.classList.add("is-changing");   // hide the old title while the next piece draws in
       parts = Array.from({ length: W < 700 ? 70 : 150 }, () => ({ x: Math.random() * W, y: Math.random() * H }));
     };
     let hold = false;
@@ -103,6 +104,7 @@
       // so the swap is invisible even if the browser takes a frame to paint the new background
       hold = true; revealing = false;
       setSlide(nxt);
+      caption.classList.remove("is-changing");   // and bring the new title in once it is there
       setTimeout(() => {
         cur = nxt; nxt = (cur + 1) % list.length;
         mctx.clearRect(0, 0, W, H); dirty = true; hold = false;

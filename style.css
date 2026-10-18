@@ -1242,3 +1242,6 @@ html { scroll-behavior: smooth; }
 /* ---------- Sold: a quiet grey label, no dot ---------- */
 .g-inquire.is-sold::before { content: none; }
 .g-inquire.is-sold { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.12em; }
+
+/* ---------- Homepage caption: fades out while the next piece draws in, back in with its title ---------- */
+.hero .hero-caption.is-changing { opacity: 0; transition-duration: 0.5s; }
