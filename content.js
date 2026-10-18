@@ -148,7 +148,7 @@ const SITE = {
     education: [
       { school: "Cornell University — Ithaca, NY", detail: "B.A. in Information Science, Minor in Fine Arts", date: "May 2025" },
       { school: "DIS Study Abroad — Copenhagen, Denmark", detail: "Scandinavia program", date: "Fall 2024" },
-      { school: "Rudolf Steiner School — New York, NY", detail: "High school", date: "" }
+      { school: "Rudolf Steiner School — New York, NY", detail: "High school", date: "Spring 2021" }
     ],
 
     tools: ["Procreate", "Photoshop", "Illustrator", "Blender", "Figma"]
