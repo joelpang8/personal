@@ -146,8 +146,9 @@ const SITE = {
     statement: "My work begins with color and material rather than image. I'm interested in the moment a surface stops being paint and starts being a place — where a viewer can locate their own memory or mood inside something that never depicted anything in particular. Each piece is built slowly, in layers, until it holds still enough to be looked at twice.",
 
     education: [
-      { school: "Cornell University", detail: "B.A. in Information Science, Minor in Fine Arts", date: "May 2025" },
-      { school: "DIS Study Abroad — Copenhagen, Denmark", detail: "Scandinavia program", date: "Fall 2024" }
+      { school: "Cornell University — Ithaca, NY", detail: "B.A. in Information Science, Minor in Fine Arts", date: "May 2025" },
+      { school: "DIS Study Abroad — Copenhagen, Denmark", detail: "Scandinavia program", date: "Fall 2024" },
+      { school: "Rudolf Steiner School — New York, NY", detail: "High school", date: "" }
     ],
 
     tools: ["Procreate", "Photoshop", "Illustrator", "Blender", "Figma"]
