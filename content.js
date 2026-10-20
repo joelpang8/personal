@@ -89,6 +89,7 @@ const SITE = {
     { file: "2025-06.jpg", status: "sold",                                         title: "Untitled", year: "2025", medium: "Scratchboard", dimensions: '8.5" x 11"' },
     { file: "2025-08.jpg",                                         title: "Untitled", year: "2025", medium: "Ink/Oil on Wood", dimensions: '8" x 10"' },
     { file: "2025-09.jpg",                                         title: "Untitled", year: "2025", medium: "Ink/Oil on Wood", dimensions: '8" x 10"' },
+    { file: "2025-10.jpg", status: "sold",                         title: "Untitled", year: "2025", medium: "Ink/Oil on Wood", dimensions: '8" x 10"' },
     { file: "2025-sketch-13.jpg",                                         title: "Sketch #13", year: "2025", medium: "Ink on paper", dimensions: '5.5" x 8.5"' },
     { file: "2025-sketch-9.jpg",                                         title: "Sketch #9", year: "2025", medium: "Ink on paper", dimensions: '5.5" x 8.5"' },
     { file: "2025-sketch-10.jpg",                                         title: "Sketch #10", year: "2025", medium: "Ink on paper", dimensions: '5.5" x 8.5"' },
@@ -141,13 +142,14 @@ const SITE = {
     paragraphs: [
       "Born and raised in New York City, Joel now works from a studio in Madison, WI. The practice moves between abstraction and quiet representation, drawn to the way color and texture can hold a feeling before it becomes a subject.",
       "Joel's work has been shown in juried and regional exhibitions, including Art on the Kinni (AOK) in River Falls, WI and the Greenwich Village Art Fair.",
-      "Joel studied at Cornell University, earning a B.A. in Information Science with a Minor in Fine Arts. Commissions and studio visits are welcome by request."
+      "Joel began at Cornell University as a BFA student in Fine Arts before turning to data science, graduating with a B.A. in Information Science and a Minor in Fine Arts. Joel currently works out of a studio in Madison, WI. Commissions and studio visits are welcome by request."
     ],
     statement: "My work begins with color and material rather than image. I'm interested in the moment a surface stops being paint and starts being a place — where a viewer can locate their own memory or mood inside something that never depicted anything in particular. Each piece is built slowly, in layers, until it holds still enough to be looked at twice.",
 
     education: [
-      { school: "Cornell University", detail: "B.A. in Information Science, Minor in Fine Arts", date: "May 2025" },
-      { school: "DIS Study Abroad — Copenhagen, Denmark", detail: "Scandinavia program", date: "Fall 2024" }
+      { school: "Cornell University — Ithaca, NY", detail: "B.A. in Information Science, Minor in Fine Arts", date: "May 2025" },
+      { school: "DIS Study Abroad — Copenhagen, Denmark", detail: "Scandinavia program", date: "Fall 2024" },
+      { school: "Rudolf Steiner School — New York, NY", detail: "High school", date: "Spring 2021" }
     ],
 
     tools: ["Procreate", "Photoshop", "Illustrator", "Blender", "Figma"]
@@ -192,6 +194,7 @@ SITE.hd = [
   "2025-07.jpg",
   "2025-08.jpg",
   "2025-09.jpg",
+  "2025-10.jpg",
   "2025-restoration.jpg",
   "2025-surveillance-1.jpg",
   "2025-surveillance-2.jpg",

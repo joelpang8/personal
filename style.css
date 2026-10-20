@@ -1199,16 +1199,6 @@ img.loupe-on { cursor: none; }
   text-transform: none;
 }
 
-/* ---------- Full-size view on phones: caption under the painting, arrows below it ---------- */
-@media (max-width: 600px) {
-  .lightbox { padding: 3.5rem 1rem 4.5rem; background: #141310; }
-  .lightbox-inner img { max-height: 62vh; max-width: 100%; box-shadow: none; }
-  .lightbox-caption { margin-top: 0.9rem; font-size: 0.88rem; }
-  .lightbox-nav { top: auto; bottom: 0.9rem; transform: none; font-size: 1.7rem; padding: 0.4rem 1.2rem; }
-  .lightbox-prev { left: 50%; margin-left: -4.2rem; }
-  .lightbox-next { right: 50%; margin-right: -4.2rem; }
-}
-
 /* ---------- Footer on phones: email and Instagram on their own line ---------- */
 @media (max-width: 600px) {
   .site-footer .wrap { flex-direction: column; align-items: flex-start; gap: 0.9rem; }
@@ -1231,3 +1221,27 @@ img.loupe-on { cursor: none; }
 .not-found img { width: 100%; height: auto; display: block; }
 .not-found figcaption { margin-top: 0.6rem; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
 @media (max-width: 700px) { .not-found { grid-template-columns: 1fr; } .not-found figure { max-width: 260px; } }
+
+/* ---------- Homepage: "View work" cue fades in as the name fades out ---------- */
+.hero-scroll {
+  position: absolute; z-index: 3; left: 50%; bottom: clamp(0.9rem, 2.5vw, 1.6rem); transform: translateX(-50%);
+  color: rgba(246, 243, 236, 0.9); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55); white-space: nowrap;
+  opacity: 0; pointer-events: none; transition: opacity 2.5s ease 3s;
+}
+.hero-scroll span { display: inline-block; margin-left: 0.35em; font-size: 1.15rem; vertical-align: -0.1em; animation: cue-bob 2.4s ease-in-out infinite; }
+.hero.name-fading .hero-scroll { opacity: 1; pointer-events: auto; }
+.hero-scroll:hover { color: #fff; }
+@keyframes cue-bob { 50% { transform: translateY(3px); } }
+@media (max-width: 600px) { .hero-scroll { left: clamp(1rem, 3vw, 2rem); transform: none; } }
+@media (prefers-reduced-motion: reduce) { .hero-scroll span { animation: none; } }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+#year-index { scroll-margin-top: 80px; }
+
+/* ---------- Sold: a quiet grey label, no dot ---------- */
+.g-inquire.is-sold::before { content: none; }
+.g-inquire.is-sold { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.12em; }
+
+/* ---------- Homepage caption: fades out while the next piece draws in, back in with its title ---------- */
+.hero .hero-caption.is-changing { opacity: 0; transition-duration: 0.5s; }
