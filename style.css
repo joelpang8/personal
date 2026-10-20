@@ -391,7 +391,7 @@ nav.main-nav a[aria-current="page"] {
 
 .lightbox-dots:empty { display: none; }
 
-.gallery-item .g-title { font-weight: 600; }
+.gallery-item .g-title { font-weight: 500; letter-spacing: 0.02em; }
 .gallery-item .g-meta { color: var(--muted); display: block; margin-top: 0.15rem; }
 
 /* ---------- Inquire link / Available & Sold tags ---------- */
@@ -495,7 +495,7 @@ nav.main-nav a[aria-current="page"] {
   color: #cfcabf;
 }
 
-.lightbox-caption strong { color: #f2f0ea; font-weight: 600; }
+.lightbox-caption strong { color: #f2f0ea; font-weight: 500; letter-spacing: 0.02em; }
 
 .lightbox-close,
 .lightbox-nav {
