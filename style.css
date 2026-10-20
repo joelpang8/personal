@@ -1265,3 +1265,4 @@ html { scroll-behavior: smooth; }
 /* ---------- Lighter caption details (Jost regular, as for the titles) ---------- */
 .g-inquire.is-sold { font-family: "Jost", var(--font); font-weight: 400; }
 .lightbox-caption { font-family: "Jost", var(--font); font-weight: 400; }
+.year-tile-year { font-family: "Jost", var(--font); font-weight: 400; }   /* homepage year labels, a little lighter */
