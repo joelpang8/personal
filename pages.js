@@ -87,7 +87,8 @@
     const canvas = document.createElement("canvas");
     stage.appendChild(canvas);
     const ctx = canvas.getContext("2d");
-    const palette = ["#1c1c1a", "#1c1c1a", "#1c1c1a", "#1c1c1a", "#d6409a", "#28b3c8", "#e6bf2e", "#7a5bd0"];
+    const ink = getComputedStyle(document.documentElement).getPropertyValue("--ink").trim() || "#1c1c1a";   // dark lines on light, light on dark
+    const palette = [ink, ink, ink, ink, "#d6409a", "#28b3c8", "#e6bf2e", "#7a5bd0"];
     let W = 0, H = 0, parts = [], raf = 0, t = 0, visible = false, mouse = { x: -9999, y: -9999 };
     const spawn = (p = {}) => {
       p.x = Math.random() * W; p.y = Math.random() * H; p.life = 120 + Math.random() * 240; p.step = 0;

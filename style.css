@@ -48,7 +48,7 @@ a { color: inherit; }
   position: sticky;
   top: env(safe-area-inset-top, 0px);
   z-index: 50;
-  background: rgba(250, 249, 246, 0.92);
+  background: var(--header-bg, rgba(250, 249, 246, 0.92));
   backdrop-filter: saturate(150%) blur(6px);
   border-bottom: 1px solid var(--line);
 }
@@ -1245,3 +1245,19 @@ html { scroll-behavior: smooth; }
 
 /* ---------- Homepage caption: fades out while the next piece draws in, back in with its title ---------- */
 .hero .hero-caption.is-changing { opacity: 0; transition-duration: 0.5s; }
+
+/* ---------- Dark theme: follows the visitor's phone / computer setting ---------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --ink: #ece8df;
+    --paper: #121110;
+    --paper-2: #1b1a18;
+    --line: #2f2d29;
+    --muted: #9d978b;
+    --accent: #bba887;
+    --header-bg: rgba(18, 17, 16, 0.92);
+  }
+  .tl-item[data-kind="award"] .tl-kind { color: #e07ab3; }
+  .g-inquire.is-sold::before { background: #d07a6f; }
+}
