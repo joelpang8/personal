@@ -392,7 +392,7 @@ nav.main-nav a[aria-current="page"] {
 .lightbox-dots:empty { display: none; }
 
 .gallery-item .g-title { font-family: "Jost", var(--font); font-weight: 400; letter-spacing: 0.02em; }   /* Futura on Apple devices has no lighter weight than medium */
-.gallery-item .g-meta { color: var(--muted); display: block; margin-top: 0.15rem; }
+.gallery-item .g-meta { color: var(--muted); display: block; margin-top: 0.15rem; font-family: "Jost", var(--font); font-weight: 400; }   /* lighter than Futura Medium on Apple devices */
 
 /* ---------- Inquire link / Available & Sold tags ---------- */
 
@@ -1261,3 +1261,7 @@ html { scroll-behavior: smooth; }
   .tl-item[data-kind="award"] .tl-kind { color: #e07ab3; }
   .g-inquire.is-sold::before { background: #d07a6f; }
 }
+
+/* ---------- Lighter caption details (Jost regular, as for the titles) ---------- */
+.g-inquire.is-sold { font-family: "Jost", var(--font); font-weight: 400; }
+.lightbox-caption { font-family: "Jost", var(--font); font-weight: 400; }
